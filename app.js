@@ -27,6 +27,13 @@ downBtn.addEventListener("click", () => {
 upBtn.addEventListener("click", () => {
     rollSlide("up")
 })
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowUp") {
+        rollSlide("up")
+    } else if (event.key === "ArrowDown") {
+        rollSlide("down")
+    }
+})
 
 function rollSlide(direction) {
     if (direction === "down") {
